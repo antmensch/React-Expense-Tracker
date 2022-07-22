@@ -7,7 +7,6 @@ import Signup from './components/Signup/Signup'
 function App() {
   return (
     <div className="App">
-      app component
       <Navbar />
       <Routes>
         <Route path="/login" element={<Login />}/>
