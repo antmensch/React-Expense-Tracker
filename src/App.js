@@ -7,7 +7,7 @@ import Signup from './components/Signup/Signup'
 function App() {
   return (
     <div className="App">
-      <Navbar />
+    { window.location.pathname !== '/login' && <Navbar />}
       <Routes>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />} />
