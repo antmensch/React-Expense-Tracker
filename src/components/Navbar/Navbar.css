@@ -1,0 +1,16 @@
+.navbar {
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar--menu {
+    height: 100%;
+}
+
+
