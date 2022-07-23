@@ -1,5 +1,5 @@
 import './GeneralLoginForm.css';
-import logo from 'C:/Users/orent/Desktop/New folder/React-Expense-Tracker/src/img/logo.svg';
+import logo from '../../../img/logo.svg';
 import { useNavigate, Link } from 'react-router-dom';
 import coverLogin from './login-cover.png';
 import googleLogo from './google-logo.png';
