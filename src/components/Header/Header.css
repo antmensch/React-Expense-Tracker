@@ -57,5 +57,24 @@
 
 .header--dropdown {
     position: absolute;
-    top: 50px;
+    top: 55px;
+    background-color: #fafafa;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s ease;
+    height: 100px;
+}
+
+.header--dropdown.collapsed {
+    height: 0;
+}
+
+.header--dropdownList {
+    list-style-type: none;
+    
+}
+
+.header--dropdownListItem {
+    margin: 10px 20px;
 }

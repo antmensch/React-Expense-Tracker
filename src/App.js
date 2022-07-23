@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import {Route, Routes, useLocation} from 'react-router-dom';
@@ -11,6 +11,26 @@ function App() {
   let currentLocation  = useLocation();
   const [nightMode, setNightMode] = useState(false);
   const [displayedComp, setDisplayedComp] = useState('');
+  useEffect(() => {
+    const loc = currentLocation.pathname;
+    let pageHeading = '';
+
+    switch (loc){
+      case '/dashboard':
+        pageHeading='Dashboard';
+        break;
+      case '/expenses':
+        pageHeading='Expenses';
+        break;
+      case '/settings':
+        pageHeading='Settings';
+        break;
+      default: 
+        pageHeading=''
+    }
+    setDisplayedComp(pageHeading);
+
+  }, [currentLocation.pathname]);
 
   return (
     <div className="App">
@@ -20,7 +40,7 @@ function App() {
       </aside>
       
       <div className='mainPart'>
-        { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header />}
+        { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header currentPage={displayedComp} />}
         <main className='content'>
           <Routes>
             <Route path="/login" element={<Signin />}/>
