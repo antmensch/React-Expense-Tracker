@@ -1,17 +1,33 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {Route, Routes} from 'react-router-dom';
+import Header from './components/Header/Header';
+import {Route, Routes, useLocation} from 'react-router-dom';
 import Signin from './components/Login/Signin/Signin'
 import Signup from './components/Login/Signup/Signup'
 
 function App() {
+  let currentLocation  = useLocation();
   return (
     <div className="App">
-    { window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Navbar />}
-      <Routes>
-        <Route path="/login" element={<Signin />}/>
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      
+      <aside>
+        { window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <Navbar />}
+      </aside>
+      
+      <div className='mainPart'>
+        { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header />}
+        <main className='content'>
+          <Routes>
+            <Route path="/login" element={<Signin />}/>
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </main>
+      </div>
+      
+
+
+    
+      
     </div>
   );
 }
