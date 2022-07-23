@@ -26,7 +26,7 @@ function App() {
         pageHeading='Settings';
         break;
       default: 
-        pageHeading=''
+        pageHeading='Expense Tracker'
     }
     setDisplayedComp(pageHeading);
 
