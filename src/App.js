@@ -1,4 +1,5 @@
 import './App.css';
+import React, {useState} from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
 import {Route, Routes, useLocation} from 'react-router-dom';
@@ -6,7 +7,11 @@ import Signin from './components/Login/Signin/Signin'
 import Signup from './components/Login/Signup/Signup'
 
 function App() {
+  
   let currentLocation  = useLocation();
+  const [nightMode, setNightMode] = useState(false);
+  const [displayedComp, setDisplayedComp] = useState('');
+
   return (
     <div className="App">
       
