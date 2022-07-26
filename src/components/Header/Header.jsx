@@ -10,6 +10,12 @@ function Header(props) {
     function toggleMenu() {
         setMenuOpen(prev => !prev);
     }
+
+    function handleNightModeToggle(e) {
+        props.setNightMode(prev => !prev);
+        console.log(`Night mode is` + (props.isInNightMode ? ' on!' : ' off!'));
+    }
+
   return (
     <header className='header'>
         <div className='header--currentComponentName'>{props.currentPage}</div>
@@ -23,7 +29,12 @@ function Header(props) {
                 <ul className='header--dropdownList'>
                     <li className='header--dropdownListItem'>Item 1</li>
                     <li className='header--dropdownListItem'>Item 2</li>
-                    <li className='header--dropdownListItem'>Item 3</li>
+                    
+                    <li className='header--dropdownListItem header--nightModeToggle'>
+                        <span>Night Mode</span>
+                        <input type="checkbox" id="switch" onChange={e => handleNightModeToggle(e)} value={props.isInNightMode} /><label htmlFor="switch">Toggle
+                        </label>
+                        </li>
                 </ul>
             </div>
         </div>

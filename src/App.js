@@ -41,7 +41,7 @@ function App() {
         { window.location.pathname !== '/login' && window.location.pathname !== '/signup' && <aside><Navbar /></aside>}
       
       <div className='mainPart'>
-        { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header currentPage={displayedComp} />}
+        { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header currentPage={displayedComp} isInNightMode={nightMode} setNightMode={setNightMode} />}
         <main className='content'>
           <Routes>
             <Route path="/login" element={<Signin />}/>
