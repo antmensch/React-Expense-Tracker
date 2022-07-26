@@ -2,7 +2,8 @@ import './App.css';
 import React, {useState, useEffect} from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import Dashboard from './components/Dashboard/Dashboard';
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import Signin from './components/Login/Signin/Signin'
 import Signup from './components/Login/Signup/Signup'
 import { testExpenses } from './testdata';
@@ -20,6 +21,9 @@ function App() {
 
     switch (loc){
       case '/dashboard':
+        pageHeading='Dashboard';
+        break;
+      case '/':
         pageHeading='Dashboard';
         break;
       case '/expenses':
@@ -44,6 +48,8 @@ function App() {
         { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header currentPage={displayedComp} isInNightMode={nightMode} setNightMode={setNightMode} />}
         <main className='content'>
           <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/login" element={<Signin />}/>
             <Route path="/signup" element={<Signup />} />
           </Routes>
