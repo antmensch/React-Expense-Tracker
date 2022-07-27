@@ -20,3 +20,7 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+.content {
+  overflow: scroll;
+}

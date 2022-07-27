@@ -3,3 +3,13 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.chart--select {
+    height: 30px;
+    width: 110px;
+    border: none;
+    color: #1B212D;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.857rem;
+    font-weight: 400;
+}

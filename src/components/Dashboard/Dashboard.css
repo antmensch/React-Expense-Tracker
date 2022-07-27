@@ -58,12 +58,41 @@
     font-size: 1.714rem;
 }
 
-.dashboard--sectionHeader {
+.dashboard--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard--sectionHeading {
     font-weight: 600;
     font-size: 1.286rem;
 }
 
 .dashboard--chartSection, .dashboard--recentSection {
     padding: 20px 25px;
+    border: #F5F5F5 solid 1px;
+    border-radius: 8px;
+    margin: 30px 0 0;
+}
+
+.dashboard--link {
+    font-size: 1rem;
+    color: #29A073;
+    text-decoration: none;
+}
+
+.dashboard--link svg {
+    margin-left: 8px;
+}
+
+/* Recent expenses styles */
+
+.recent--table {
+    width: 100%;
+}
+
+.recent--th {
+    text-align: left;
 }
 
