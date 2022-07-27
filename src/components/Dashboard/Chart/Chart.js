@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Chart.css';
 
 import {
@@ -64,7 +64,7 @@ ChartJS.register(
       },
       {
         label: 'Expenses',
-        data: [200, 300, 400, 100, 0, 150, 60].map(elem => elem * Math.random()),
+        data: [200, 300, 400, 100, 0, 150, 60].map(elem => elem * Math.random() * 5 ),
         borderColor: '#C8EE44',
         backgroundColor: '#C8EE44',
         yAxisID: 'y1',
@@ -73,18 +73,39 @@ ChartJS.register(
   };
 
 function Chart(props) {
+
+  const [selectedPeriod, setSelectedPeriod] = useState('week');
+
+  function getPreviousMonthLength() {
+    const date = new Date();
+    return new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
+  }
+
+  console.log(getPreviousMonthLength());
+
+  const selectOptions = [
+    {value: 3, text: 'Last 3 days' },
+    {value: 7, text: 'Last week' },
+    {value: getPreviousMonthLength(), text: 'Last Month' },
+    {value: '3-months', text:'Last 3 months' },
+    {value: '6-months', text:'Last 6 months' },
+    {value: 'year' , text:'Last year' },
+  ]
+
+  function handlePeriodChange(e) {
+    console.log(e.target.value);
+    setSelectedPeriod(e.target.value);
+  }
+
     
   return (
     <>
     <div className='chart--header'>
         <h3 className='chart--heading'>Working Capital</h3>
-        <select>
-            <option value="3 days">Last 7 days</option>
-            <option value="week">Last week</option>
-            <option value="month">Last month</option>
-            <option value="3 months">Last 3 months</option>
-            <option value="6 months">Last 6 months</option>
-            <option value="year">Last year</option>
+        <select value={selectedPeriod} onChange={e => handlePeriodChange(e)} className='chart--select'>
+          {selectOptions.map( (elem)=> (
+            <option key={elem.value} className='chart--option' value={elem.value}>{elem.text}</option>
+          ))}
         </select>
     </div>
     
