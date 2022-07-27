@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import walletIcon from './img/wallet-solid.svg'
 import './Dashboard.css'
+import Chart from './Chart/Chart';
 
 function Dashboard() {
 
@@ -55,7 +56,7 @@ function Dashboard() {
                 </div>
             </div>
             <section className='dashboard--chartSection'>
-                <h3 className='dashboard--sectionHeader'>Working Capital</h3>
+                <Chart />
             </section>
             <section className='dashboard--recentSection'>
                 <h3 className="dashboard--sectionHeader">Recent Expenses</h3>
