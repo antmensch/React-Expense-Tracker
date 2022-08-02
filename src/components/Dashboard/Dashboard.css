@@ -10,6 +10,7 @@
 
 .dashboard--recurringExpenses {
     width: 33.3%;
+    margin: 0 40px;
 }
 
 .dashboard--totalsSection {
@@ -76,13 +77,13 @@
     margin: 30px 0 0;
 }
 
-.dashboard--link {
+.dashboard--link, .recurring--link {
     font-size: 1rem;
     color: #29A073;
     text-decoration: none;
 }
 
-.dashboard--link svg {
+.dashboard--link svg, .recurring--link svg {
     margin-left: 8px;
 }
 
@@ -93,6 +94,71 @@
 }
 
 .recent--th {
+    text-align: center;
+    text-transform: uppercase;
+    color: #929EAE;
+    font-size: .857rem;
+    font-weight: 600;
+}
+
+.recent--name {
     text-align: left;
 }
+
+.recent--tbodyData {
+    overflow: hidden;
+    white-space: nowrap;
+    height: 50px;
+}
+
+.recent--icon {
+    width: 50px;
+    max-width: 50px;
+}
+
+.recent--img {
+    vertical-align: top;
+}
+
+.recent--description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.recent--descriptionItem {
+    font-weight: 500;
+    color: #1B212D;
+}
+
+.recent--descriptionSeller {
+    font-size: .857rem;
+    color: #929EAE;
+}
+
+.recent--type {
+    text-align: center;
+    font-weight: 500;
+    color: #929EAE;
+}
+
+.recent--amount {
+    font-weight: 600;
+    color: #1B212D;
+    text-align: center;
+}
+
+.recent--date {
+    color: #929EAE;
+    text-align: center;
+    font-weight: 500;
+}
+
+.recurring--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 

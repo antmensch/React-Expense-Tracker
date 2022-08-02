@@ -81,8 +81,6 @@ function Chart(props) {
     return new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
   }
 
-  console.log(getPreviousMonthLength());
-
   const selectOptions = [
     {value: 3, text: 'Last 3 days' },
     {value: 7, text: 'Last week' },
