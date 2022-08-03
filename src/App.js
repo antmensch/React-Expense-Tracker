@@ -6,13 +6,14 @@ import Dashboard from './components/Dashboard/Dashboard';
 import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import Signin from './components/Login/Signin/Signin'
 import Signup from './components/Login/Signup/Signup'
-import {getTestExpenses} from './testdata';
+import {getTestExpenses, getTestRecurringExpenses} from './testdata';
 
 function App() {
   
   let currentLocation  = useLocation();
 
   const [expenses, setExpenses] = useState({});
+  const [recurringExpenses, setRecurringExpenses] = useState({});
   const [nightMode, setNightMode] = useState(false);
   const [displayedComp, setDisplayedComp] = useState('');
 
@@ -42,10 +43,15 @@ function App() {
 
   useEffect(() => {
     async function getAndSetExpenses() {
-      let result = await getTestExpenses();
-      let json = await JSON.parse(result);
-      setExpenses(json);
+      const resultExpenses = await getTestExpenses();
+      const jsonExpenses = await JSON.parse(resultExpenses);
+
+      const resultRecurringExpenses = await getTestRecurringExpenses();
+      const jsonRecurringExpenses = await JSON.parse(resultRecurringExpenses);
+      setExpenses(jsonExpenses);
+      setRecurringExpenses(jsonRecurringExpenses);
     }
+
     getAndSetExpenses();
   }, [currentLocation]);
 
@@ -58,8 +64,18 @@ function App() {
         { currentLocation.pathname != '/login' && currentLocation.pathname != '/signup' &&  <Header currentPage={displayedComp} isInNightMode={nightMode} setNightMode={setNightMode} />}
         <main className='content'>
           <Routes>
-            <Route path="/" element={ JSON.stringify(expenses) == '{}' ? <p>Loading data</p> : <Dashboard expenses={expenses} receiveExpences={'a'} /> } />
-            <Route path="/dashboard" element={ JSON.stringify(expenses) == '{}' ? <p>Loading data</p> : <Dashboard expenses={expenses} receiveExpences={'a'} /> } />} />
+            <Route path="/" element = {
+               JSON.stringify(expenses) == '{}' || 
+               JSON.stringify(recurringExpenses) == '{}' ? 
+               <p>Loading data</p> : 
+               <Dashboard expenses={expenses} recurringExpenses={recurringExpenses} receiveExpences={'a'} /> 
+               } />
+            <Route path="/dashboard" element={ 
+              JSON.stringify(expenses) == '{}' ||
+              JSON.stringify(recurringExpenses) == '{}' ? 
+              <p>Loading data</p> : 
+              <Dashboard expenses={expenses} recurringExpenses={recurringExpenses} receiveExpences={'a'} /> 
+              } />
             <Route path="/login" element={<Signin />}/>
             <Route path="/signup" element={<Signup />} />
           </Routes>

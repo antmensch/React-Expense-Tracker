@@ -127,7 +127,7 @@
     padding: 5px 0;
 }
 
-.recent--descriptionItem {
+.recent--descriptionText {
     font-weight: 500;
     color: #1B212D;
 }
@@ -155,10 +155,55 @@
     font-weight: 500;
 }
 
+/* Recurring expenses styles */
+
 .recurring--header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.recurring--expenseDescriptionContainer {
+    display: flex;
+    align-items: center;
+}
+
+.recurring--expense {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.recurring--description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.recurring--description div {
+    height: 20px;
+}
+
+.recurring--descriptionText {
+    font-weight: 500;
+    color: #1B212D;
+}
+
+.recurring--descriptionSeller {
+    font-weight: 400;
+    color: #929EAE;
+}
+
+.recurring--price {
+    font-weight: 600;
+    font-size: 1.143rem;
+    display: flex;
+    align-items: center;
 }
 
 

@@ -99,7 +99,7 @@ function Chart(props) {
   return (
     <>
     <div className='chart--header'>
-        <h3 className='chart--heading'>Working Capital</h3>
+        <h3 className='dashboard--sectionHeading chart--heading'>Working Capital</h3>
         <select value={selectedPeriod} onChange={e => handlePeriodChange(e)} className='chart--select'>
           {selectOptions.map( (elem)=> (
             <option key={elem.value} className='chart--option' value={elem.value}>{elem.text}</option>
