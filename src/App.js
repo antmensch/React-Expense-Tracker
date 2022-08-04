@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import Signin from './components/Login/Signin/Signin'
 import Signup from './components/Login/Signup/Signup'
+import Expenses from './components/Expenses/Expenses';
 import {getTestExpenses, getTestRecurringExpenses} from './testdata';
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
               <p>Loading data</p> : 
               <Dashboard expenses={expenses} recurringExpenses={recurringExpenses} receiveExpences={'a'} /> 
               } />
+            <Route path="/expenses" element={JSON.stringify(expenses) == '{}' ? <p>Loading data</p> : <Expenses expenses={expenses} />} />
             <Route path="/login" element={<Signin />}/>
             <Route path="/signup" element={<Signup />} />
           </Routes>

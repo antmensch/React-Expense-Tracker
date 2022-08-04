@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 30px 40px;
+    margin: 30px 40px 0px;
     padding: 8px 0;
     flex-wrap: wrap;
     align-items: center;
@@ -87,7 +87,7 @@ input[type=checkbox]{
     visibility: hidden;
   }
   
-  label {
+  .toggle--label {
     margin-left: 10px;
     cursor: pointer;
     text-indent: -9999px;
@@ -98,7 +98,7 @@ input[type=checkbox]{
     position: relative;
   }
   
-  label:after {
+  .toggle--label:after {
     content: '';
     position: absolute;
     top: 1px;

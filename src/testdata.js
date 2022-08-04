@@ -19,6 +19,7 @@ export function getTestRecurringExpenses() {
 const testExpenses = [
     {
         invoiceId: 'MGL0988217',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -30,6 +31,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL0986717',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -41,6 +43,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL0934217',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -52,6 +55,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL1830007',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -63,6 +67,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL0983dD7',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -74,6 +79,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL098329898',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -85,6 +91,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL3383217',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -96,6 +103,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL5553217',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',
@@ -107,6 +115,7 @@ const testExpenses = [
 
     {
         invoiceId: 'MGL0983111',
+        id: nanoid(),
         pictureLink: icon,
         description: 'Iphone 13 Pro Max',
         vendor: 'Apple Inc.',

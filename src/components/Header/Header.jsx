@@ -32,7 +32,7 @@ function Header(props) {
                     
                     <li className='header--dropdownListItem header--nightModeToggle'>
                         <span>Night Mode</span>
-                        <input type="checkbox" id="switch" onChange={e => handleNightModeToggle(e)} value={props.isInNightMode} /><label htmlFor="switch">Toggle
+                        <input type="checkbox" id="switch" onChange={e => handleNightModeToggle(e)} value={props.isInNightMode} /><label className='toggle--label' htmlFor="switch">Toggle
                         </label>
                         </li>
                 </ul>

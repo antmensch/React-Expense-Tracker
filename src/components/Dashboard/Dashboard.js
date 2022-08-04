@@ -6,8 +6,6 @@ import Chart from './Chart/Chart';
 
 function Dashboard(props) {
 
-    console.log(props.recurringExpenses)
-
     const [selectedView, setSelectedView] = useState('total');
     const displayedRecentExpenses = props.expenses.splice(-3);
 
