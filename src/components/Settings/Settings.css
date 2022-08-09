@@ -1,0 +1,92 @@
+.settings--header  {
+    padding: 0 20px;
+}
+
+.settings--heading {
+    font-weight: 600;
+    font-size: 1.429rem;
+    color: #1B212D;
+    margin-bottom: 5px;
+}
+
+.settings--subheading {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #929EAE;
+    margin-bottom: 40px;
+}
+
+.settings--formHeader {
+    padding: 0 20px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings--formHeading {
+    font-weight: 600;
+    font-size: 1.29rem;
+    color: #1B212D;
+}
+
+.settings--editButton {
+    border: none;
+    background-color: transparent;
+    color: #29A073;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.settings--form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 80px);
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 600px;
+    margin-right: 200px;
+    padding-top: 20px;
+}
+
+.settings--form-emailContainer {
+    grid-column-start: 0;
+    grid-column-end: span 2;
+}
+
+.settings--form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.settings--form-input {
+    border-radius: 10px;
+    border: 1px solid #f1f1f3;
+    width: 100%;
+    height: 50px;
+    padding: 0 25px;
+}
+
+.settings--form-label {
+    color: #78778B;
+    margin-bottom: 10px;
+}
+
+.settings--form-buttonContainer {
+    display: block;
+}
+
+.settings--form-updateButton {
+    width: 190px;
+    height: 50px;
+    background-color: #29A073;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+}
