@@ -9,6 +9,7 @@ import Signup from './components/Login/Signup/Signup'
 import Expenses from './components/Expenses/Expenses';
 import Settings from './components/Settings/Settings';
 import {getTestExpenses, getTestRecurringExpenses} from './testdata';
+import {app, db} from './store/firebase-config'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
   const [recurringExpenses, setRecurringExpenses] = useState({});
   const [nightMode, setNightMode] = useState(false);
   const [displayedComp, setDisplayedComp] = useState('');
+  console.dir(app);
 
   useEffect(() => {
     const loc = currentLocation.pathname;

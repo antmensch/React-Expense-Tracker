@@ -60,6 +60,7 @@
     flex-direction: column;
     width: 100%;
     padding: 0 20px;
+    position: relative;
 }
 
 .settings--form-input {
@@ -67,7 +68,8 @@
     border: 1px solid #f1f1f3;
     width: 100%;
     height: 50px;
-    padding: 0 25px;
+    padding: 0 55px;
+    color:#78778B;
 }
 
 .settings--form-label {
@@ -89,4 +91,21 @@
     cursor: pointer;
     font-family: 'Epilogue', sans-serif;
     font-weight: 600;
+}
+
+.settings--form-icon-left {
+    position: absolute;
+    top: 42px;
+    left: 45px;
+}
+
+.settings--form-iconEmail {
+    fill: #a2a2a8;
+}
+
+.settings--form-icon-right {
+    position: absolute;
+    top: 42px;
+    right: 45px;
+    fill: #a2a2a8;
 }
